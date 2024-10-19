@@ -1,6 +1,8 @@
 /* import 'package:charla_vertex_gemini/presentation/courses/courses_page.dart'; */
 
+import 'package:charla_vertex_gemini/features/create_commit_use_case.dart';
 import 'package:charla_vertex_gemini/firebase_options.dart';
+import 'package:charla_vertex_gemini/presentation/commit_creater_page.dart';
 import 'package:charla_vertex_gemini/presentation/courses/courses_page.dart';
 import 'package:charla_vertex_gemini/presentation/create_story_page.dart';
 import 'package:charla_vertex_gemini/presentation/options_generator_page.dart';
@@ -22,12 +24,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: CreateStoryPage(),
       // home: CreateSimplePage(),
       // home: OptionsGeneratorPage(),
-      home: CoursesPage(),
+      home: CommitCreaterPage(
+        createCommitUseCase: CreateCommitUseCase(),
+      ),
     );
   }
 }
