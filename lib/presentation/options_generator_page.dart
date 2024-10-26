@@ -4,7 +4,7 @@ import 'package:charla_vertex_gemini/presentation/widget/scaffold_tecylab.dart';
 import 'package:firebase_vertexai/firebase_vertexai.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+
 import 'package:json_view/json_view.dart';
 
 enum TypeView { html, markdown, json, textPlain }
@@ -87,7 +87,8 @@ class _OptionsGeneratorPageState extends State<OptionsGeneratorPage> {
             const HeightSpacer(),
             if (textIAResponse.isNotEmpty)
               switch (tapViewSelected) {
-                TypeView.html => HtmlWidget(textIAResponse),
+                TypeView.html =>
+                  Markdown(shrinkWrap: true, data: textIAResponse),
                 TypeView.markdown =>
                   Markdown(shrinkWrap: true, data: textIAResponse),
                 TypeView.json =>

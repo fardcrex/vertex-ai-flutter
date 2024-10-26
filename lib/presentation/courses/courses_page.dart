@@ -1,6 +1,5 @@
 import 'package:charla_vertex_gemini/presentation/courses/course_model.dart';
 import 'package:charla_vertex_gemini/presentation/courses/create_course_by_ai.dart';
-import 'package:charla_vertex_gemini/presentation/courses/create_course_by_form.dart';
 import 'package:charla_vertex_gemini/presentation/courses/widgets/course_card.dart';
 import 'package:charla_vertex_gemini/presentation/widget/scaffold_tecylab.dart';
 import 'package:flutter/material.dart';
